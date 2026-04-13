@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 176.94 177.16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke-miterlimit: 4;
+        stroke-width: 1px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.2, SVG Export Plug-In . SVG Version: 1.2.0 Build 154)  -->
+  <g>
+    <g id="Layer_1">
+      <path id="_パス_2" data-name="パス_2" class="cls-2" d="M88.28,0l88.28,88.28-88.28,88.28L0,88.28,88.28,0Z"/>
+      <g id="_グループ_10" data-name="グループ_10">
+        <g id="_グループ_9" data-name="グループ_9">
+          <g id="_楕円形_1" data-name="楕円形_1">
+            <circle class="cls-2" cx="88.55" cy="88.78" r="62.5"/>
+            <circle class="cls-4" cx="88.55" cy="88.78" r="62"/>
+          </g>
+          <g id="_多角形_1" data-name="多角形_1">
+            <path class="cls-1" d="M80.55,93.66v-9.78l24,4.89-24,4.89Z"/>
+            <path class="cls-1" d="M102.04,88.78l-20.99-4.28v8.55l20.99-4.28M107.05,88.78l-27,5.5v-11l27,5.5Z"/>
+          </g>
+        </g>
+        <g id="_長方形_4" data-name="長方形_4">
+          <rect class="cls-2" x="26.05" y="26.28" width="125" height="125" transform="translate(-36.84 88.62) rotate(-45)"/>
+          <rect class="cls-3" x="26.55" y="26.78" width="124" height="124" transform="translate(-36.84 88.62) rotate(-45)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176.777" height="177.164" viewBox="0 0 176.777 177.164">
+  <g id="Group_106" data-name="Group 106" transform="translate(-1371.224 -3548.835)" style="isolation: isolate">
+    <rect id="Rectangle_38" data-name="Rectangle 38" width="124.841" height="124.841" transform="translate(1459.724 3548.835) rotate(45)" opacity="0.282"/>
+    <g id="Group_10" data-name="Group 10" transform="translate(499.112 2923.111)">
+      <g id="Group_9" data-name="Group 9" transform="translate(87 302)">
+        <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(811 350)" fill="none" stroke="#fff" stroke-width="1">
+          <circle cx="62.5" cy="62.5" r="62.5" stroke="none"/>
+          <circle cx="62.5" cy="62.5" r="62" fill="none"/>
+        </g>
+        <g id="Polygon_1" data-name="Polygon 1" transform="translate(892 407) rotate(90)" fill="#fff">
+          <path d="M 10.38787841796875 26.5 L 0.6121214628219604 26.5 L 5.5 2.504960060119629 L 10.38787841796875 26.5 Z" stroke="none"/>
+          <path d="M 5.5 5.009920120239258 L 1.2242431640625 26 L 9.7757568359375 26 L 5.5 5.009920120239258 M 5.5 0 L 11 27 L 0 27 L 5.5 0 Z" stroke="none" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(960.5 626.112) rotate(45)" fill="none" stroke="#fff" stroke-width="1">
+        <rect width="125" height="125" stroke="none"/>
+        <rect x="0.5" y="0.5" width="124" height="124" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
