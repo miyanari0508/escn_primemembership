@@ -606,3 +606,25 @@ body {
 @media (min-width: 992px){
   .box-gallery.hayama-2 .video-embed{ margin-bottom: min(0.5vw, 6px); }
 }
+
+/* 北海道プロジェクト限定 */
+.project-hokkaido .map-note {
+  margin-top: 20px;
+}
+
+/* 既存デザイン踏襲 */
+.project-hokkaido .map-note {
+  background: #f5f5f5;
+  padding: 20px 30px;
+}
+
+.project-hokkaido .map-note p {
+  font-size: 1.4rem;
+  line-height: 2.2;
+  display: flex;
+}
+
+.project-hokkaido .map-note p span {
+  width: 80px;
+  flex-shrink: 0;
+}
