@@ -1311,7 +1311,7 @@ body {
 @media (max-width: 767px) {
   #properties .topic-list {
     flex-direction: column;
-    gap: 2rem; /* 縦の隙間を調整 */
+    gap: 1.2rem; /* 縦の隙間を調整 */
   }
   #properties .topic-list .item {
     width: 100%;
@@ -1348,4 +1348,29 @@ body {
 .topic-list .item:hover figure.comingsoon::after {
   opacity: 0.25;
   transform: scale(1.05);
+}
+
+#properties .topic-list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2%;
+  row-gap: 6rem;        /* ← 段間だけ広げる（お好みで調整） */
+  flex-wrap: wrap;      /* 念のため明示 */
+}
+
+/* リンクなしカード用：a と同等のレイアウトを付与 */
+.topic-list .item a,
+.topic-list .item .card {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* リンクなしカードのカーソルを通常に */
+.topic-list .item .card { 
+  cursor: default; 
 }
