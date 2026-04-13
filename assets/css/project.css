@@ -562,3 +562,47 @@ body {
 }
 
 #other.karuizawa{color: white;}
+
+/* ---- YouTube Lazy ---- */
+.video-embed{ margin: 30px 0 50px; text-align:center; }
+.yt-lazy{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;         /* 高さを確保（レスポンシブ） */
+  background: #000 center / cover no-repeat;
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* 再生ボタン（任意） */
+.yt-lazy::after{
+  content: ''; position: absolute; inset:0; margin:auto;
+  width: 74px; height: 74px; border-radius: 999px;
+  background: rgba(0,0,0,.45); box-shadow: 0 6px 14px rgba(0,0,0,.2);
+}
+.yt-lazy::before{
+  content: ''; position:absolute; inset:0; margin:auto;
+  width: 0; height: 0; border-left: 24px solid #fff;
+  border-top: 16px solid transparent; border-bottom: 16px solid transparent;
+  transform: translateX(6px); z-index:1;
+}
+.yt-lazy.is-loaded{ cursor: default; }
+.yt-lazy.is-loaded::before, .yt-lazy.is-loaded::after{ display:none; }
+.yt-lazy iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+/* ▼ 動画ブロックをギャラリーと同じ“行フル幅”に */
+.box-gallery.hayama-2 .video-embed{
+  margin: min(4vw,40px) 0 min(6vw,60px);
+  text-align: left;   /* 左基準に */
+  max-width: none;    /* 以前の固定幅があれば無効化 */
+  width: 100%;        /* 行のフル幅 */
+}
+.box-gallery.hayama-2 .video-embed .yt-lazy{
+  width: 100%;        /* 中身もフル幅で */
+  aspect-ratio: 16/9; /* レスポンシブ比率 */
+}
+
+/* 行間のトーンを揃えたい場合（任意） */
+@media (min-width: 992px){
+  .box-gallery.hayama-2 .video-embed{ margin-bottom: min(0.5vw, 6px); }
+}

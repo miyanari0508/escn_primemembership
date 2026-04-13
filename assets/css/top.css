@@ -352,6 +352,56 @@ body {
 }
 
 
+/* properties section */
+#properties {
+  background: #f9f9f9; /* 背景色を区別したい場合 */
+  color: #000;
+  padding: 10rem 0;
+}
+
+#properties .container {
+  max-width: 1320px;
+}
+
+#properties .tit .tit-42 {
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+#properties .container > p {
+  font-size: 1.4rem;
+  margin: 6rem 0;
+}
+
+/* レスポンシブ調整は .topic-list と共通 */
+
+/* Coming Soon overlay */
+.topic-list .item figure.comingsoon {
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-list .item figure.comingsoon::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 半透明オーバーレイ */
+  z-index: 1;
+}
+
+.topic-list .item figure.comingsoon .overlay-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
 
 .stage {
 	padding: 15rem 0;
@@ -1245,4 +1295,57 @@ body {
 		width: 45vw;
 	}
 
+}
+/* ===== Exclusive Residences（販売中物件）専用レイアウト ===== */
+/* PC用：3カラム */
+#properties .topic-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+#properties .topic-list .item {
+  width: calc((100% - 4%) / 3);
+}
+
+/* SP用：1カラムに戻す */
+@media (max-width: 767px) {
+  #properties .topic-list {
+    flex-direction: column;
+    gap: 2rem; /* 縦の隙間を調整 */
+  }
+  #properties .topic-list .item {
+    width: 100%;
+  }
+}
+
+/* ComingSoonオーバーレイ演出 */
+.topic-list .item figure.comingsoon {
+  position: relative;
+  overflow: hidden;
+}
+.topic-list .item figure.comingsoon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+.topic-list .item figure.comingsoon .overlay-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(16px, 1.6vw, 22px);
+  letter-spacing: .1em;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Hover時：暗さを少し弱めて動きを表現 */
+.topic-list .item:hover figure.comingsoon::after {
+  opacity: 0.25;
+  transform: scale(1.05);
 }

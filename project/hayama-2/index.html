@@ -45,7 +45,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../assets/js/common.js"></script>
     <script src="../../assets/js/jquery.inview.js"></script>
 </head>
-
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCFRXGBM"
@@ -123,6 +122,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</figure>
 				</div>
 				<div class="slider-tit">実績例</div>
+              
 				<div class="slider" id="slider-01">
 					<div class="item">
 						<figure>
@@ -168,10 +168,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="wrap-03">
 			<div class="container">
 				<div class="box-gallery hayama-2">
-					<h3 class="inView fade-up">葉山町エリアにおけるエスコンの実績</h3>
+					<h3 class="inView fade-up">葉山町エリアにおけるエスコンの実績</h3>          
 					<div class="list">
 						<p class="p1 inView fade-up">DIAMAS葉山</p>
 						<p class="p2 inView fade-up">2024年竣工</p>
+					
 						<ul class="ul-01">
 							<li>
 								<figure class="inView zoom-img">
@@ -263,4 +264,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script src="../../assets/js/project.js"></script>
 	
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.yt-lazy').forEach(function (el) {
+    var poster = el.getAttribute('data-poster');
+    if (poster) el.style.backgroundImage = 'url("' + poster + '")';
+
+    var handler = function (e) {
+      if (e.type === 'keydown' && e.key !== 'Enter') return;
+      if (el.classList.contains('is-loaded')) return;
+
+      var id = el.getAttribute('data-ytid');  // ← ここが動画ID
+      var title = el.getAttribute('data-title') || 'YouTube video player';
+      var src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('src', src);
+      iframe.setAttribute('title', title);
+      iframe.setAttribute('allowfullscreen', 'allowfullscreen');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.style.position = 'absolute';
+      iframe.style.inset = '0';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+
+      el.classList.add('is-loaded');
+      el.innerHTML = '';
+      el.appendChild(iframe);
+    };
+    el.addEventListener('click', handler);
+    el.addEventListener('keydown', handler);
+  });
+});
+</script>
 </html>

@@ -33,7 +33,6 @@ function onYouTubeIframeAPIReady() {
     createPlayer('ytplayerSp', 'epWL0sYdzBA', 0);
 }
 
-
 function onPlayerReady(event) {
     event.target.playVideo();
 }
